@@ -5,6 +5,8 @@ import Login from "../pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import AuthGuard from "./AuthGuard";
+import TermsAndConditions from "../pages/TermsAndConditions";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
 
 const appRoutes = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const appRoutes = createBrowserRouter([
         </GoogleOAuthProvider>
       </AuthGuard>
     ),
+  },
+  {
+    path: "/terms-and-conditions",
+    element: <TermsAndConditions />,
+  },
+  {
+    path: "/privacy-policy",
+    element: <PrivacyPolicy />,
   },
 ]);
 
